@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     final ssh = SSH(); 
     ssh.connectToLG(); 
-    final String imageUrl = 'https://i.imgur.com/0rCWmFO.png'; 
+    final String imageUrl = 'https://imgur.com/a/ORdfkHy'; 
     return MaterialApp(
       initialRoute: '/',
       routes: {
