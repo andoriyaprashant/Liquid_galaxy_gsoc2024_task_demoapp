@@ -156,7 +156,7 @@ Expanded(
               try {
                 await ssh.dispatchKml(
                   KmlHelper.screenOverlayImage(
-                    "https://i.imgur.com/0rCWmFO.png",
+                    "https://imgur.com/a/ORdfkHy",
                     9 / 16,
                   ),
                 );
