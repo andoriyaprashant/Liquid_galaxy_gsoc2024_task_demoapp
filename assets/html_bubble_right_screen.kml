@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Placemark>
+      <name><![CDATA[HTML Bubble]]></name>
+      <description><![CDATA[
+        <!DOCTYPE html>
+        <html>
+        <head>
+          <style>
+            body {
+              font-family: Arial, sans-serif;
+            }
+            .container {
+              padding: 10px;
+              background-color: #ffffff;
+              border: 1px solid #cccccc;
+              border-radius: 5px;
+              width: 300px;
+            }
+            .city-name {
+              font-size: 24px;
+              font-weight: bold;
+            }
+            .your-name {
+              font-size: 18px;
+              font-style: italic;
+            }
+          </style>
+        </head>
+        <body>
+          <div class="container">
+            <div class="city-name">New York</div> <!-- Update city name here -->
+            <div class="your-name">John Doe</div> <!-- Update your name here -->
+          </div>
+        </body>
+        </html>
+      ]]></description>
+      <Style>
+        <BalloonStyle>
+          <text><![CDATA[$[description]]]></text>
+        </BalloonStyle>
+      </Style>
+      <Point>
+        <coordinates>-86.9022,40.4172</coordinates> <!-- Coordinates for the bubble position -->
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
