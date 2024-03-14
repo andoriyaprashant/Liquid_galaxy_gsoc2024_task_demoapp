@@ -18,17 +18,15 @@ class KmlHelper {
     </Document>
 </kml>
 ''';
-  static String lookAtLinear(double latitude, double longitude, double zoom,
-          double tilt, double bearing) =>
-      '<LookAt><longitude>$longitude</longitude><latitude>$latitude</latitude><range>$zoom</range><tilt>$tilt</tilt><heading>$bearing</heading><gx:altitudeMode>relativeToGround</gx:altitudeMode></LookAt>';
+  
+  static String lookAtLinear(double zoom, double tilt, double bearing) =>
+      '<LookAt><longitude>75.778885</longitude><latitude>26.922070</latitude><range>$zoom</range><tilt>$tilt</tilt><heading>$bearing</heading><gx:altitudeMode>relativeToGround</gx:altitudeMode></LookAt>';
 
-  static String orbitLookAtLinear(double latitude, double longitude,
-          double zoom, double tilt, double bearing) =>
-      '<gx:duration>2</gx:duration><gx:flyToMode>smooth</gx:flyToMode><LookAt><longitude>$longitude</longitude><latitude>$latitude</latitude><range>$zoom</range><tilt>$tilt</tilt><heading>$bearing</heading><gx:altitudeMode>relativeToGround</gx:altitudeMode></LookAt>';
+  static String orbitLookAtLinear(double zoom, double tilt, double bearing) =>
+      '<gx:duration>2</gx:duration><gx:flyToMode>smooth</gx:flyToMode><LookAt><longitude>75.778885</longitude><latitude>26.922070</latitude><range>$zoom</range><tilt>$tilt</tilt><heading>$bearing</heading><gx:altitudeMode>relativeToGround</gx:altitudeMode></LookAt>';
 
-  static String lookAtLinearInstant(double latitude, double longitude,
-          double zoom, double tilt, double bearing) =>
-      '<gx:duration>0.5</gx:duration><gx:flyToMode>smooth</gx:flyToMode><LookAt><longitude>$longitude</longitude><latitude>$latitude</latitude><range>$zoom</range><tilt>$tilt</tilt><heading>$bearing</heading><gx:altitudeMode>relativeToGround</gx:altitudeMode></LookAt>';
+  static String lookAtLinearInstant(double zoom, double tilt, double bearing) =>
+      '<gx:duration>0.5</gx:duration><gx:flyToMode>smooth</gx:flyToMode><LookAt><longitude>75.778885</longitude><latitude>26.922070</latitude><range>$zoom</range><tilt>$tilt</tilt><heading>$bearing</heading><gx:altitudeMode>relativeToGround</gx:altitudeMode></LookAt>';
 
   static String getSlaveDefaultKml(int slaveNo) =>
       '''<?xml version="1.0" encoding="UTF-8"?>
