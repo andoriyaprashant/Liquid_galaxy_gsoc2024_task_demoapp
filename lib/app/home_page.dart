@@ -57,8 +57,8 @@ class _HomeScreenState extends State<HomeScreen> {
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: SizedBox(
-              width: 200, // Adjust the width as needed
-              height: 200, // Adjust the height as needed
+              width: 180, // Adjust the width as needed
+              height: 180, // Adjust the height as needed
               child: Image.asset('assets/logo.png'), // Adjust the path accordingly
             ),
           ),
@@ -79,7 +79,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           'Relaunch Lg',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 40,
+                            fontSize: 20,
                             fontWeight: FontWeight.w700,
                           ),
                         ),
@@ -106,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           'Reboot LG',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 40,
+                            fontSize: 20,
                             fontWeight: FontWeight.w700,
                           ),
                         ),
@@ -156,7 +156,7 @@ Expanded(
               try {
                 await ssh.dispatchKml(
                   KmlHelper.screenOverlayImage(
-                    "https://i.imgur.com/0rCWmFO.png",
+                    "https://imgur.com/a/ORdfkHy",
                     9 / 16,
                   ),
                 );
@@ -169,15 +169,32 @@ Expanded(
               }
             }
           },
-          child: Container(
-            height: 100,
-            color: Colors.blue,
-            child: Center(
+          child: ReusableCard(
+            colour: Colors.blue,
+            onPress: () async {
+              if (ssh.client != null) {
+                try {
+                  await ssh.dispatchKml(
+                    KmlHelper.screenOverlayImage(
+                      "https://imgur.com/a/ORdfkHy",
+                      9 / 16,
+                    ),
+                  );
+                } catch (e) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('Failed to dispatch KML query'),
+                    ),
+                  );
+                }
+              }
+            },
+            cardChild: const Center(
               child: Text(
                 'Print bubble',
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 40,
+                  fontSize: 20,
                   fontWeight: FontWeight.w700,
                 ),
               ),
@@ -199,14 +216,14 @@ Expanded(
                     child: ReusableCard(
                       colour: Colors.blue,
                       onPress: () async {
-                        await ssh.createOrbit("Vit bhopal");
+                        await ssh.createOrbit("Jaipur");
                       },
                       cardChild: const Center(
                         child: Text(
-                          'Create Orbit around Vit Bhopal',
+                          'Create Orbit around Jaipur',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 40,
+                            fontSize: 20,
                             fontWeight: FontWeight.w700,
                           ),
                         ),
@@ -231,10 +248,10 @@ Expanded(
                       },
                       cardChild: const Center(
                         child: Text(
-                          'SEARCH = Jaipur',
+                          'Go Home Jaipur',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 40,
+                            fontSize: 20,
                             fontWeight: FontWeight.w700,
                           ),
                         ),
